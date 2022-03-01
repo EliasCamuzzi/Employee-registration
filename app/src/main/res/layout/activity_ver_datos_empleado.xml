@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5D7E6A"
+    tools:context=".VerDatosEmpleado">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="30dp">
+
+            <EditText
+                android:id="@+id/Buscar_Por_DNI"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:backgroundTint="#323232"
+                android:ems="10"
+                android:hint="Search by DNI"
+                android:inputType="text"
+                android:labelFor="@+id/viewNombre"
+                android:textAlignment="center"
+                android:textColor="#191919"
+                android:textColorHint="#323232"
+                android:textSize="20sp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/Bucar_Empleado"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:backgroundTint="#284027"
+                android:onClick="BotonBuscarRegistro"
+                android:text="Search"
+                android:textColor="#E6E6E6"
+                android:textSize="18sp"
+                app:rippleColor="#684C4C" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".9"
+            android:background="#5D7E6A"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="50dp">
+
+            <EditText
+                android:id="@+id/Ingreso_Nombre"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:backgroundTint="#323232"
+                android:ems="10"
+                android:hint="Name"
+                android:inputType="text"
+                android:labelFor="@+id/Titulo_Nombre"
+                android:minHeight="48dp"
+                android:textAlignment="center"
+                android:textColor="#191919"
+                android:textColorHint="#323232"
+                android:textSize="20sp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/Ingreso_Apellido"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:backgroundTint="#323232"
+                android:ems="10"
+                android:hint="Last name"
+                android:inputType="text"
+                android:labelFor="@+id/Titulo_Categoria"
+                android:textAlignment="center"
+                android:textColor="#191919"
+                android:textColorHint="#323232"
+                android:textSize="20sp"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/Ingreso_DNI"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:backgroundTint="#323232"
+                android:ems="10"
+                android:hint="DNI"
+                android:textAlignment="center"
+                android:textColor="#191919"
+                android:textColorHint="#323232"
+                android:textSize="20sp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/Ingreso_Puesto"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:backgroundTint="#323232"
+                android:ems="10"
+                android:hint="Position"
+                android:textAlignment="center"
+                android:textColor="#191919"
+                android:textColorHint="#323232"
+                android:textSize="20sp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Signo_Dolar_2"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="$"
+                    android:textColor="#191919"
+                    android:textSize="28sp" />
+
+                <EditText
+                    android:id="@+id/Ingreso_Salario"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#323232"
+                    android:ems="10"
+                    android:hint="Salary"
+                    android:inputType="none"
+                    android:textAlignment="center"
+                    android:textColor="#191919"
+                    android:textColorHint="#323232"
+                    android:textSize="20sp"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/Guardar_Cambios"
+                android:layout_width="230dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:backgroundTint="#284027"
+                android:onClick="BotonSaveChanges"
+                android:text="Save changes"
+                android:textColor="#E6E6E6"
+                android:textSize="20sp"
+                app:rippleColor="#684C4C" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/Eliminar_Registro"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center|top"
+                    android:backgroundTint="#284027"
+                    android:clickable="true"
+                    android:onClick="BotonEliminarRegistro"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/delete_register"
+                    app:backgroundTint="#284027"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageButton
+                    android:id="@+id/Editar_Registro"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center|top"
+                    android:backgroundTint="#284027"
+                    android:clickable="true"
+                    android:onClick="BotonEditarRegistro"
+                    android:padding="22dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/edit_register"
+                    app:backgroundTint="#284027"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
